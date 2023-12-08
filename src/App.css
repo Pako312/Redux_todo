@@ -1,0 +1,12 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.card-wrap .subtitle {
+  margin-bottom: 20px;
+}
+
+.card-wrap .card-actions {
+  justify-content: flex-end;
+}
