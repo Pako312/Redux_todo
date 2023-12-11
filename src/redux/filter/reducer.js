@@ -1,15 +1,20 @@
-import { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } from "./types";
-const initialState = []
-const filteredTodo = (state = initialState, action) => {
-    switch (action.type) {
-        case SHOW_ACTIVE:
-            return state.filter(todo => !todo.isComplete)
-        case SHOW_COMPLETED:
-            return state.filter(todo => todo.isComplete);
-        case SHOW_ALL:
-        default:
-            return state;
-    }
+import { FILTER_TODO } from "./types";
 
+
+export const TYPE_OF_FILTER = {
+    SHOW_ALL: 'SHOW_ALL',
+    SHOW_ACTIVE: 'SHOW_ACTIVE',
+    SHOW_COMPLETED: 'SHOW_COMPLETED'
 }
-export default filteredTodo;
+
+const initialState = TYPE_OF_FILTER.SHOW_ALL
+
+const todoFilterReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case FILTER_TODO:
+            return action.payload
+        default:
+            return state
+    }
+}
+export default todoFilterReducer;

@@ -24,7 +24,7 @@ const TodoItem = (props) => {
     >
       {text}
       <Button onClick={handleDelete}>
-        delete
+        X
       </Button>
     </div>
   )

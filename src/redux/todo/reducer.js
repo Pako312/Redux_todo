@@ -1,5 +1,5 @@
 import {ADD_TODO, DELETE_TODO, TOGGLE_TODO} from "./types";
-import {deleteTodo} from "./actions";
+
 
 const initialState = []
 
